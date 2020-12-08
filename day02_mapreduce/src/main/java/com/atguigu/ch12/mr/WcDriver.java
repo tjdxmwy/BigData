@@ -25,10 +25,14 @@ public class WcDriver {
         configuration.set("mapreduce.framework.name", "yarn");
         configuration.set("mapreduce.app-submission.cross-platform", "true");//是否允许从windows向linux提交
         configuration.set("yarn.resourcemanager.hostname", "hadoop103");
+
+        configuration.set("mapred.job.queue.name", "hive");  //向hive队列添加任务
+
         Job job = Job.getInstance(configuration);
 
 //        job.setJarByClass(WcDriver.class);
         job.setJar("E:\\BigData\\note\\03_Hadoop\\Code\\day02_mapreduce\\target\\day02_mapreduce-1.0-SNAPSHOT.jar");
+
 
         job.setMapperClass(WcMapper.class);
         job.setReducerClass(WcReducer.class);

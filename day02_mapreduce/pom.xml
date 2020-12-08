@@ -50,7 +50,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.atguigu.ch12.mr.WcDriver</mainClass>
+                            <mainClass>com.atguigu.ch13.mr.WordCountDriver</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
